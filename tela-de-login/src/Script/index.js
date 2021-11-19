@@ -11,10 +11,10 @@ var user = [
 function Enviar() {
     var email = document.getElementById("email").value;
     var pass = document.getElementById("pass").value;
-    var imagem = document.getElementById("img-user");
+    var imagem = document.getElementById("login_img-user");
 
     if ( email === user[0].email && pass == user[0].password) {
-        imagem.innerHTML = `<img src='${user[0].img}' class='img-user' alt='Imagem User'>`
+        imagem.innerHTML = `<img src='${user[0].img}' class='login_img-user' alt='Imagem User'>`
         console.log("Dados corretos!");
     } else {
         console.log("Email não encontrado ou senha incorreta!");

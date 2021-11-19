@@ -20,7 +20,7 @@
 }
 
 /* container */
-.container {
+.container-login {
    border: 3px solid rgba(255, 255, 255, 0.4);
    border-radius: 10px;
    background: rgba(255, 255, 255, 0.2);
@@ -31,7 +31,7 @@
    padding: 32px 40px 39px;
 }
 
-.img-user {
+.login_img-user {
    width: 120px;
    height: 120px;
    background-size: cover;
@@ -63,12 +63,12 @@
 }
 
 /* Buttons */
-.btn-login {
+.login_btn-login {
    display: flex;
    justify-content: space-between;
 }
 
-.btn-create, .btn-submit {
+.login_btn-create, .login_btn-submit {
    border: 3px solid #FFFFFF;
    border-radius: 9px;
    height: 40px;
@@ -82,14 +82,14 @@
    cursor: pointer;
 }
 
-.btn-create {
+.login_btn-create {
    background: linear-gradient(90deg, rgba(71, 192, 230, 0.7) 0%, rgba(84, 215, 233, 0.7) 100%);
    width: 180px;
    display: flex;
    justify-content: center;
 }
 
-.btn-submit {
+.login_btn-submit {
    background: linear-gradient(90deg, rgba(71, 118, 230, 0.7) 0%, rgba(142, 84, 233, 0.7) 100%);
    width: 100px;
    display: flex;
