@@ -1,0 +1,46 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+}
+
+/* body */
+.box {
+   width: 100vw;
+   height: 100vh;
+   background-image: url("https://www.showmetech.com.br/wp-content/uploads//2020/12/aurora-green4k-1024x576.jpg");
+   background-size: cover;
+   display: grid;
+   justify-content: center;
+   align-content: center;
+}
+
+/* container */
+.container {
+   border: 3px solid rgba(255, 255, 255, 0.4);
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.2);
+   width: 400px;
+   max-width: 400px;
+   height: 500px;
+   display: grid;
+   padding: 32px 40px 39px;
+}
+
+.img {
+   width: 120px;
+   height: 120px;
+   background-size: cover;
+   border-radius: 50%;
+   margin: auto;
+}
+
+label {
+   font-size: 18px;
+   line-height: 21px;
+   margin: 5px 0;
+   height: auto;
+}
