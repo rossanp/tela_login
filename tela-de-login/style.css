@@ -5,6 +5,7 @@
    font-family: 'Roboto', sans-serif;
    font-style: normal;
    font-weight: 400;
+   color: white;
 }
 
 /* body */
@@ -47,7 +48,7 @@
 .container-date-login label {
    font-size: 18px;
    line-height: 21px;
-   padding: 24px 0 5px 0;
+   padding: 0 0 5px 0;
    height: 100%;
    display: flex;
    align-items: end;
@@ -72,17 +73,33 @@
    border-radius: 9px;
    height: 40px;
    display: flex;
+   text-align: center;
    justify-content: space-between;
    align-items: center;
-   padding: 16px 32px;
-   color: white;
    text-transform: uppercase;
+   font-size: 16px;
+   line-height: 21px;
+   cursor: pointer;
 }
 
 .btn-create {
    background: linear-gradient(90deg, rgba(71, 192, 230, 0.7) 0%, rgba(84, 215, 233, 0.7) 100%);
+   width: 180px;
+   display: flex;
+   justify-content: center;
 }
 
 .btn-submit {
    background: linear-gradient(90deg, rgba(71, 118, 230, 0.7) 0%, rgba(142, 84, 233, 0.7) 100%);
+   width: 100px;
+   display: flex;
+   justify-content: center;
+}
+
+/* Footer */
+footer {
+   font-size: small;
+   display: flex;
+   justify-content: end;
+   margin-right: 15px;
 }
