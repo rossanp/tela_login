@@ -17,23 +17,25 @@
 <body>
    <div class="box">
       <div class="container">
-         <img class="img" src="https://otakukart.com/wp-content/uploads/2021/02/aogiri-kaneki-kagune.jpg"
-            alt="Imagem User">
+         <div class="img-user" class="img"></div>
+         <!-- <img src="" alt="Imagem User"> -->
          <div class="container-date-login">
-            <label id="email" for="email">E-mail</label>
+            <label for="email">E-mail</label>
             <input type="email" class="email" id="email">
             <label for="pass" style="padding-top: 24px;">Senha</label>
             <input type="password" class="password" id="pass">
          </div>
          <div class="btn-login">
             <button type="button" class="btn-create">Create Account</button>
-            <button type="submit" class="btn-submit">Sign In</button>
+            <button type="button" class="btn-submit" onclick="Enviar()">Sign In</button>
          </div>
       </div>
       <footer>
          &copy; Rossan P. - 11/2021
       </footer>
    </div>
+
+   <script src="./index.js"></script>
 
 </body>
 
