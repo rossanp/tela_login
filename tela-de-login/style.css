@@ -38,9 +38,51 @@
    margin: auto;
 }
 
-label {
+/* E-mail and Password */
+.container-date-login {
+   margin: 43px 0 50px 0;
+   display: grid;
+}
+
+.container-date-login label {
    font-size: 18px;
    line-height: 21px;
-   margin: 5px 0;
-   height: auto;
+   padding: 24px 0 5px 0;
+   height: 100%;
+   display: flex;
+   align-items: end;
+}
+
+.container-date-login input {
+   border: 3px solid rgba(255, 255, 255, 0.4);
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.2);
+   height: 50px;
+   padding: 0 15px;
+}
+
+/* Buttons */
+.btn-login {
+   display: flex;
+   justify-content: space-between;
+}
+
+.btn-create, .btn-submit {
+   border: 3px solid #FFFFFF;
+   border-radius: 9px;
+   height: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 16px 32px;
+   color: white;
+   text-transform: uppercase;
+}
+
+.btn-create {
+   background: linear-gradient(90deg, rgba(71, 192, 230, 0.7) 0%, rgba(84, 215, 233, 0.7) 100%);
+}
+
+.btn-submit {
+   background: linear-gradient(90deg, rgba(71, 118, 230, 0.7) 0%, rgba(142, 84, 233, 0.7) 100%);
 }
