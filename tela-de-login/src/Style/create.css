@@ -1,0 +1,56 @@
+.container-create {
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 400px;
+    max-width: 400px;
+    height: 100%;
+    display: grid;
+    padding: 32px 40px;
+ }
+
+ /* Inputs and Labels */
+.container-date-create {
+    display: grid;
+ }
+ 
+.container-date-create label {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 5px 0 5px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+ }
+
+ .container-date-create input {
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    height: 40px;
+    padding: 0 15px;
+ }
+
+ /* Buttons */
+ .btn-create {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+ }
+ 
+ .create_btn-submit {
+    border: 3px solid #FFFFFF;
+    border-radius: 9px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 21px;
+    cursor: none;
+    background: linear-gradient(90deg, rgba(71, 118, 230, 0.7) 0%, rgba(142, 84, 233, 0.7) 100%);
+    width: 100px;
+ }

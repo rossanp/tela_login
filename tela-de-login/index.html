@@ -7,11 +7,7 @@
    
    <link rel="stylesheet" href="./src/Style/login.css">
    <link rel="stylesheet" href="./src/Style/create.css">
-   
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;900&display=swap" rel="stylesheet">
-   
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -20,7 +16,7 @@
 
 <body>
    <div class="box">
-      <div class="container-login">
+      <div class="container-login" style="display: none;">
          <div id="login_img-user" style="justify-self: center;"></div>
          <div class="container-date-login">
             <label for="email">E-mail</label>
@@ -33,21 +29,25 @@
             <button type="button" class="login_btn-submit" onclick="Enviar()">Sign In</button>
          </div>
       </div>
-      <div class="container-create" style="display: none;">
-         <div id="img-user" style="justify-self: center;"></div>
-         <div class="container-date-login">
-            <label for="email">E-mail</label>
-            <input type="email" class="email" id="email">
-            <label for="pass" style="padding-top: 24px;">Senha</label>
-            <input type="password" class="password" id="pass">
+      <div class="container-create">
+         <div class="container-date-create">
+            
+            <label for="create_nome">Nome</label>
+            <input type="text" class="create_nome" id="create_nome" onblur="VerificarNome()">
+
+            <label for="create_email">E-mail</label>
+            <input type="email" class="create_email" id="create_email" onblur="VerificarEmail()">
+
+            <label for="create_pass">Senha</label>
+            <input type="password" class="create_password" id="create_pass">
+
          </div>
-         <div class="btn-login">
-            <button type="button" class="btn-create">Create Account</button>
-            <button type="button" class="btn-submit" onclick="Enviar()">Sign In</button>
+         <div class="btn-create">
+            <button type="button" id="create_btn-submit" class="create_btn-submit" onclick="Criar()">Create</button>
          </div>
       </div>
       <footer>
-         &copy; Rossan P. - 11/2021
+         <p>&copy; Rossan P. - 11/2021</p>
       </footer>
    </div>
 
