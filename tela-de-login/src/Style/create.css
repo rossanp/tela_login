@@ -31,6 +31,27 @@
     padding: 0 15px;
  }
 
+ .result-nome {
+   font-size: x-small;
+   color: rgba(255, 0, 0, 0.678);
+   display: grid;
+   justify-content: end;
+ }
+
+ .result-email {
+   font-size: x-small;
+   color: rgba(255, 0, 0, 0.678);
+   display: grid;
+   justify-content: end;
+ }
+
+ .result-pass {
+   font-size: x-small;
+   color: rgba(255, 0, 0, 0.678);
+   display: grid;
+   justify-content: end;
+ }
+
  /* Buttons */
  .btn-create {
     display: flex;
@@ -50,7 +71,7 @@
     text-transform: uppercase;
     font-size: 16px;
     line-height: 21px;
-    cursor: none;
+    cursor: pointer;
     background: linear-gradient(90deg, rgba(71, 118, 230, 0.7) 0%, rgba(142, 84, 233, 0.7) 100%);
     width: 100px;
  }
