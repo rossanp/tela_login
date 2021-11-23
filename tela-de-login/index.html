@@ -15,53 +15,55 @@
 </head>
 
 <body>
-   <div class="box">
-      <!-- Page Login -->
-      <div class="container-login" id="container-login">
+   <div class="box" id="box">
+      <div class="container" id="container">
 
-         <div id="login_img-user" style="justify-self: center;"></div>
-         <div class="container-date-login">
-            <label for="email">E-mail</label>
-            <input type="email" class="login_email" id="login_email" onblur="VerificarEmailLogin()">
-            <p class="login_result-nome" id="login_result-nome"></p>
-            
-            <label for="pass" style="padding-top: 24px;">Senha</label>
-            <input type="password" class="login_password" id="login_pass" onblur="VerificarSenhaLogin()">
-            <p class="login_result-password" id="login_result-password"></p>
+         <!-- Page Login -->
+         <div class="container-login" id="container-login">
+   
+            <div id="login_img-user" style="justify-self: center;"></div>
+            <div class="container-date-login">
+               <label for="email">E-mail</label>
+               <input type="email" class="login_email" id="login_email" onblur="VerificarEmailLogin()">
+               <p class="login_result-nome" id="login_result-nome"></p>
+               
+               <label for="pass" style="padding-top: 24px;">Senha</label>
+               <input type="password" class="login_password" id="login_pass" onblur="VerificarSenhaLogin()">
+               <p class="login_result-password" id="login_result-password"></p>
+            </div>
+            <div class="login_btn-login">
+               <button type="button" class="login_btn-create" onclick="CriarUsuario()">Create Account</button>
+               <button type="button" class="login_btn-submit" onclick="Enviar()">Sign In</button>
+            </div>
+   
          </div>
-         <div class="login_btn-login">
-            <button type="button" class="login_btn-create" onclick="CriarUsuario()">Create Account</button>
-            <button type="button" class="login_btn-submit" onclick="Enviar()">Sign In</button>
-         </div>
-
-      </div>
-      <!-- Page Create -->
-      <div class="container-create" id="container-create" style="display: none;">
-
-         <div class="container-date-create">
-
-            <label for="create_nome">Nome</label>
-            <input type="text" class="create_nome" id="create_nome" onblur="VerificarNomeCreate()">
-            <p class="result-nome" id="result-nome"></p>
-
-            <label for="create_email">E-mail</label>
-            <input type="email" class="create_email" id="create_email" onblur="VerificarEmailCreate()">
-            <p class="result-email" id="result-email"></p>
-
-            <label for="create_pass">Senha</label>
-            <input type="password" class="create_password" id="create_pass" onblur="VerificarPasswordCreate()">
-            <p class="result-pass" id="result-pass"></p>
-
-         </div>
-
+         <!-- Page Create -->
+         <div class="container-create" id="container-create" style="display: none;">
+   
+            <div class="container-date-create">
+   
+               <label for="create_nome">Nome</label>
+               <input type="text" class="create_nome" id="create_nome" onblur="VerificarNomeCreate()">
+               <p class="result-nome" id="result-nome"></p>
+   
+               <label for="create_email">E-mail</label>
+               <input type="email" class="create_email" id="create_email" onblur="VerificarEmailCreate()">
+               <p class="result-email" id="result-email"></p>
+   
+               <label for="create_pass">Senha</label>
+               <input type="password" class="create_password" id="create_pass" onblur="VerificarPasswordCreate()">
+               <p class="result-pass" id="result-pass"></p>
+   
+            </div>
          <div class="btn-create">
             <button type="button" id="create_btn-submit" class="create_btn-submit" onclick="Criar()">Create</button>
          </div>
-         
       </div>
+
       <footer>
          <p>&copy; Rossan P. - 11/2021</p>
       </footer>
+      </div>
    </div>
 
    <script src="./src/Script/index.js"></script>

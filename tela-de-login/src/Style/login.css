@@ -17,6 +17,7 @@
    display: grid;
    justify-content: center;
    align-content: center;
+   perspective: 1000;
 }
 
 /* container */
