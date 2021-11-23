@@ -19,6 +19,7 @@ function VerificarEmailLogin() {
     for (i = 0; i <= user.length; i++) {
         if (newEmail === user[i].email) {
             resultImg.innerHTML = `<img src='${user[i].img}' class='login_img-user' alt='Imagem User'>`
+            resultEmail.innerHTML = ""
             return false;
         } else {
             resultEmail.innerHTML = "Usuário não existente."
@@ -167,6 +168,10 @@ function Criar() {
             img: "",
             password: newPass,
         }
+
+        newNome = "";
+        newPass = "";
+
         user.push(newUsuario)
         alert("Usuário criado.")
 
