@@ -31,21 +31,7 @@
     padding: 0 15px;
  }
 
- .result-nome {
-   font-size: x-small;
-   color: rgba(255, 0, 0, 0.678);
-   display: grid;
-   justify-content: end;
- }
-
- .result-email {
-   font-size: x-small;
-   color: rgba(255, 0, 0, 0.678);
-   display: grid;
-   justify-content: end;
- }
-
- .result-pass {
+ .result-nome, .result-email, .result-pass {
    font-size: x-small;
    color: rgba(255, 0, 0, 0.678);
    display: grid;

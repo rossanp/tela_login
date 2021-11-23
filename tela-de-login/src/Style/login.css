@@ -26,7 +26,7 @@
    background: rgba(255, 255, 255, 0.2);
    width: 400px;
    max-width: 400px;
-   height: 500px;
+   height: 100%;
    display: grid;
    padding: 32px 40px 39px;
 }
@@ -48,10 +48,10 @@
 .container-date-login label {
    font-size: 18px;
    line-height: 21px;
-   padding: 0 0 5px 0;
+   padding: 5px 0 5px 0;
    height: 100%;
    display: flex;
-   align-items: end;
+   align-items: center;
 }
 
 .container-date-login input {
@@ -61,6 +61,13 @@
    height: 40px;
    padding: 0 15px;
 }
+
+.login_result-nome, .login_result-password {
+   font-size: x-small;
+   color: rgba(255, 0, 0, 0.678);
+   display: grid;
+   justify-content: end;
+ }
 
 /* Buttons */
 .login_btn-login {

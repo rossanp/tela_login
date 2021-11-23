@@ -1,3 +1,4 @@
+/* Criando um array para teste */
 var user = [
     {
         id: 1,
@@ -8,16 +9,46 @@ var user = [
     }
 ]
 
-function Enviar() {
-    var email = document.getElementById("email").value;
-    var pass = document.getElementById("pass").value;
-    var imagem = document.getElementById("login_img-user");
+/* Funções da tela login */
+/* Verificando se o usuário existe */
+function VerificarEmailLogin() {
+    var newEmail = document.getElementById("login_email").value
+    var resultEmail = document.getElementById("login_result-nome")
+    var resultImg = document.getElementById("login_img-user")
 
-    if (email === user[0].email && pass == user[0].password) {
-        imagem.innerHTML = `<img src='${user[0].img}' class='login_img-user' alt='Imagem User'>`
-        console.log("Dados corretos!");
+    for (i = 0; i <= user.length; i++) {
+        if (newEmail === user[i].email) {
+            resultImg.innerHTML = `<img src='${user[i].img}' class='login_img-user' alt='Imagem User'>`
+            return false;
+        } else {
+            resultEmail.innerHTML = "Usuário não existente."
+            resultImg.innerHTML = ""
+            return true;
+        }
+    }
+}
+
+function VerificarSenhaLogin() {
+    var newPass = document.getElementById("login_pass").value
+    var newEmail = document.getElementById("login_email").value
+
+    for (i = 0; i < user.length; i++) {
+        if (newEmail == user[i].email) {
+            if (user[i].password == newPass) {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+}
+
+function Enviar() {
+
+    if (VerificarEmailLogin() == false && VerificarSenhaLogin() == false) {
+        alert("Dados corretos! Você está logado.");
     } else {
-        console.log("Email não encontrado ou senha incorreta!");
+        alert("Dados incorretos! Por favor, revise os dados e tente novamente.");
     }
 }
 
@@ -26,7 +57,7 @@ var newEmail = document.getElementById("create_email").value
 var newPass = document.getElementById("create_pass").value
 
 /* Verificando se o usuário existe */
-function VerificarNome() {
+function VerificarNomeCreate() {
     var newNome = document.getElementById("create_nome").value
     var resultNome = document.getElementById("result-nome")
     /* var newUser = newNome.replace(/ /g,''); retirando os espaços do nome */
@@ -43,7 +74,7 @@ function VerificarNome() {
 }
 
 /* Verificando se o e-mail existe */
-function VerificarEmail() {
+function VerificarEmailCreate() {
     var newEmail = document.getElementById("create_email").value
     var resultEmail = document.getElementById("result-email")
 
@@ -51,7 +82,7 @@ function VerificarEmail() {
         if (newEmail == user[i].email) {
             resultEmail.innerHTML = "E-mail existente. Escolha outro."
             return true;
-        } else if (newEmail.indexOf('@') == -1 || newEmail.indexOf('.') == -1 ) {
+        } else if (newEmail.indexOf('@') == -1 || newEmail.indexOf('.') == -1) {
             resultEmail.innerHTML = "Por favor, informe um E-MAIL válido!"
         } else {
             resultEmail.innerHTML = ""
@@ -60,11 +91,11 @@ function VerificarEmail() {
     }
 }
 
-function VerificarPassword() {
+function VerificarPasswordCreate() {
     var newPass = document.getElementById("create_pass").value
     var resultPass = document.getElementById("result-pass")
 
-    if ( newPass.length < 6 ) {
+    if (newPass.length < 6) {
         resultPass.innerHTML = "A senha deve conter mínimo 6 caracteres."
         return true
     } else {
@@ -105,4 +136,18 @@ function Criar() {
     }
 
     console.log(user)
+}
+
+/* Mudança de tela Login e Criar */
+function CriarUsuario() {
+    var telaCreate = document.getElementById("container-create")
+    var telaLogin = document.getElementById("container-login")
+
+    if ( telaCreate.style.display == "none") {
+        telaCreate.style.display = "block";
+        telaLogin.style.display = "none";
+    } else {
+        telaCreate.style.display = "none";
+        telaLogin.style.display = "block";
+    }
 }
