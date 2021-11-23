@@ -8,12 +8,16 @@
    color: white;
 }
 
+body {
+   background-image: url("https://www.showmetech.com.br/wp-content/uploads//2020/12/aurora-green4k-1024x576.jpg");
+   background-size: cover;
+}
+
 /* body */
 .box {
    width: 100vw;
    height: 100vh;
-   background-image: url("https://www.showmetech.com.br/wp-content/uploads//2020/12/aurora-green4k-1024x576.jpg");
-   background-size: cover;
+
    display: grid;
    justify-content: center;
    align-content: center;

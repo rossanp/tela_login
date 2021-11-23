@@ -104,63 +104,7 @@ function VerificarPasswordCreate() {
     }
 }
 
-/* Criando o usuário */
-function Criar() {
-
-    var newNome = document.getElementById("create_nome").value
-    var newEmail = document.getElementById("create_email").value
-    var newPass = document.getElementById("create_pass").value
-    var nextId = 0
-    var newUsuario = []
-    var boxGeral = document.getElementById("box")
-    var container = document.getElementById("container")
-    var telaCreate = document.getElementById("container-create")
-    var telaLogin = document.getElementById("container-login")
-
-    /* Descobrindo o novo id */
-    for (i = 0; i <= user.length; i++) {
-        nextId = i + 1
-    }
-
-    /* Verificando se o dados existem para adiciona-los */
-    if (newNome === "" || newEmail === "" || newPass === "") {
-        alert("Favor, preencher os dados.")
-    } else if (VerificarNomeCreate() === true || VerificarEmailCreate() === true || VerificarPasswordCreate() === true) {
-        console.log("Dados incorretos.")
-    } else {
-        newUsuario = {
-            id: nextId,
-            nome: newNome,
-            email: newEmail,
-            img: "",
-            password: newPass,
-        }
-        user.push(newUsuario)
-        /* alert("Usuário criado.") */
-
-        telaCreate.style.display = "none";
-        telaLogin.style.display = "block";
-
-        boxGeral.style.transform = "rotateY(180deg)";
-
-        container.style.transform = "rotateY(180deg)";
-        container.style.transition = "1.2s";
-        container.style.transformStyle = "preserve-3d";
-        container.style.position = "relative";
-
-        telaLogin.style.top = "0";
-        telaLogin.style.left = "0";
-        telaCreate.style.zIndex = "0";
-
-        telaCreate.style.zIndex = "2";
-        telaCreate.style.top = "0";
-        telaCreate.style.left = "0";
-    }
-
-    console.log(user)
-}
-
-/* Mudança de tela Login e Criar */
+/* Tela Login e mudança de tela Login para Criar */
 function CriarUsuario() {
     var boxGeral = document.getElementById("box")
     var container = document.getElementById("container")
@@ -191,34 +135,57 @@ function CriarUsuario() {
     }
 }
 
+/* Tela Criar e mudança de tela Criar para Login */
+function Criar() {
 
-/*  else {
-        telaCreate.style.display = "none";
-        telaLogin.style.display = "block";
+    var newNome = document.getElementById("create_nome").value
+    var newEmail = document.getElementById("create_email").value
+    var newPass = document.getElementById("create_pass").value
+
+    var nextId = 0
+    var newUsuario = []
+
+    var container = document.getElementById("container")
+    var telaCreate = document.getElementById("container-create")
+    var telaLogin = document.getElementById("container-login")
+
+    /* Descobrindo o novo id */
+    for (i = 0; i <= user.length; i++) {
+        nextId = i + 1
     }
 
-transform: rotateY(180deg);
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
+    /* Verificando se o dados existem para adiciona-los */
+    if (newNome === "" || newEmail === "" || newPass === "") {
+        alert("Favor, preencher os dados.")
+    } else if (VerificarNomeCreate() === true || VerificarEmailCreate() === true || VerificarPasswordCreate() === true) {
+        console.log("Dados incorretos.")
+    } else {
+        newUsuario = {
+            id: nextId,
+            nome: newNome,
+            email: newEmail,
+            img: "",
+            password: newPass,
+        }
+        user.push(newUsuario)
+        alert("Usuário criado.")
 
-    define a velocidade da transição
-.flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
+        telaCreate.style.display = "none";
+        telaLogin.style.display = "block";
 
-  esconde o verso durante a animação
-  .front, .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-   left: 0;
-  }
+        container.style.transform = "rotateY(-180deg)";
+        container.style.transition = "1.2s";
+        container.style.transformStyle = "preserve-3d";
+        container.style.position = "relative";
 
-  frente posicionada sobre o verso
-  .front { z-index: 2;  }
+        telaLogin.style.top = "0";
+        telaLogin.style.left = "0";
+        telaCreate.style.zIndex = "0";
 
-  verso inicialmente escondido
-  .back { transform: rotateY(180deg); }*/
+        telaCreate.style.zIndex = "2";
+        telaCreate.style.top = "0";
+        telaCreate.style.left = "0";
+    }
+
+    /* console.log(user) */
+}
